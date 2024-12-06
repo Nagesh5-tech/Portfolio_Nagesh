@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HANUMANTHARAYAPPA GARI NAGESH</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<div id="root"></div>
+
+    <section id="about">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a creative and results-driven developer passionate about web technologies.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">React</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">Python</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>E-Commerce Website</h3>
+                <p>Built a responsive site for a small business with integrated payment systems.</p>
+                <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HANUMANTHARAYAPPA GARI NAGESH. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<!-- This setup is not suitable for production. -->
+<!-- Only use it in development! -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+</script>
+<script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+function MyButton() {
+  const handleClick = () => {
+    alert('I am a software engineer and Full-Stack Developer');
+  };
+  return (
+    <button onClick={handleClick}>
+      Goal
+    </button>
+  );
+}
+let App = function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to my World</h1>
+      <MyButton />
+    </div>
+  );
+}
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+</style>
+
+</html>
